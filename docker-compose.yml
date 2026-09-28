@@ -1,0 +1,9 @@
+# Optional: PostgreSQL for production-like runs.
+# Then set DATABASE_URL=postgresql+psycopg://educap:educap@localhost:5432/educap and `pip install "psycopg[binary]"`.
+services:
+  db:
+    image: postgres:16
+    environment: { POSTGRES_USER: educap, POSTGRES_PASSWORD: educap, POSTGRES_DB: educap }
+    ports: ["5432:5432"]
+    volumes: [pgdata:/var/lib/postgresql/data]
+volumes: { pgdata: {} }

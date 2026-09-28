@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html, body { height: 100%; }
+body { @apply bg-paper text-pine font-sans antialiased; }
+::selection { background: #F0B42955; }
+.scroll-thin::-webkit-scrollbar { width: 8px; }
+.scroll-thin::-webkit-scrollbar-thumb { background: #b9c8bf; border-radius: 8px; }
+.prose-educap { @apply prose prose-sm max-w-none text-pine prose-headings:font-serif prose-headings:text-pine prose-strong:text-pine prose-a:text-moss prose-code:text-pine prose-code:bg-mist/60 prose-code:px-1 prose-code:py-0.5 prose-code:rounded prose-code:before:content-none prose-code:after:content-none prose-pre:bg-pine prose-pre:text-paper prose-blockquote:border-cap prose-blockquote:text-moss prose-li:my-0.5 prose-p:my-2; }
+.flip { perspective: 900px; }
+.flip-inner { transition: transform .5s; transform-style: preserve-3d; }
+.flip-inner.on { transform: rotateY(180deg); }
+.flip-face { backface-visibility: hidden; }
+.flip-back { transform: rotateY(180deg); }

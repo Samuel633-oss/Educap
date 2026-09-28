@@ -1,0 +1,9 @@
+@tailwind base; @tailwind components; @tailwind utilities;
+body { @apply bg-paper text-pine font-sans antialiased; }
+:focus-visible { outline: 2px solid #12352F; outline-offset: 2px; }
+.prose-tutor p { margin: 0 0 .75em; } .prose-tutor p:last-child { margin: 0 }
+.prose-tutor ul, .prose-tutor ol { margin: 0 0 .75em 1.25em; list-style: revert; }
+.prose-tutor strong { font-weight: 650; } .prose-tutor code { background:#D9E3DC; padding:.1em .35em; border-radius:4px; font-size:.9em }
+@keyframes pulse-dot { 0%,80%,100% { opacity:.25 } 40% { opacity:1 } }
+.dot { animation: pulse-dot 1.2s infinite; } .dot:nth-child(2){animation-delay:.15s} .dot:nth-child(3){animation-delay:.3s}
+@media (prefers-reduced-motion: reduce) { .dot { animation: none; opacity:.6 } }
