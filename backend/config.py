@@ -25,7 +25,10 @@ class Settings:
         self.embedding_base_url = os.getenv("EMBEDDING_BASE_URL", "https://api.openai.com/v1")
         self.embedding_api_key = os.getenv("EMBEDDING_API_KEY", "")
         self.embedding_model = os.getenv("EMBEDDING_MODEL", "text-embedding-3-small")
-        self.cors_origins = _csv(os.getenv("CORS_ORIGINS", "http://localhost:3000"))
+                self.cors_origins = _csv(os.getenv(
+    "CORS_ORIGINS",
+    "https://educap-frontend.onrender.com,http://localhost:3000,http://localhost:5000,http://127.0.0.1:5000"
+))
 
 
 settings = Settings()
